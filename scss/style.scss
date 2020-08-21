@@ -6,8 +6,8 @@ $font-primary: 'Work Sans',Arial, sans-serif;
 $white: #fff;
 $black: #000;
 $darken: #151111;
-
-$primary: #d291bc;
+$random: #393939;
+$primary: #81daf8;
 $secondary: #fd6b00;
 
 
@@ -462,7 +462,7 @@ h1, h2, h3, h4, h5,
 	&.btn-primary {
 		background: lighten($primary,0);
 		border: 1px solid $primary !important;
-		color: $white;
+		color: $random;
 		&:hover {
 			border: 1px solid $primary;
 			background: transparent !important;
@@ -914,7 +914,9 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-
+#team{
+	height: auto;
+}
 
 
 // USEFUL CODE
@@ -968,20 +970,20 @@ textarea.form-control {
 	padding: 4em 0;
 	background: $primary;
 	h1.logo{
-		color: $white;
+		color: $random;
 		font-size: 30px;
 		font-weight: 300;
 	}
 	h2.location{
 		font-size: 24px;
-		color: rgba(255,255,255,.9);
+		color:$random;
 	}
 	.ftco-footer-widget {
 		ul{
 			li{
 				a{
 					span{
-						color: $white;
+						color: $random;
 					}
 				}
 			}
