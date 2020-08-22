@@ -9041,6 +9041,16 @@ h1, h2, h3, h4, h5,
   font-size: 22px;
 }
 
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .ftco-gradient {
   background: #d291bc;
   background: -moz-linear-gradient(45deg, #d291bc 0%, rgba(255, 255, 255, 0) 100%);
@@ -9597,6 +9607,9 @@ textarea.form-control {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+.heading-section .underline {
+  border-bottom: 1px solid #b3b3b3;
 }
 .heading-section h2 {
   z-index: -1;
