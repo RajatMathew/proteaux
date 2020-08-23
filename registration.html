@@ -256,22 +256,45 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script>
   $("#form").submit((e)=>{
       e.preventDefault()
+      $(".sbmt").attr("disabled", true);
+    $('.sbmt').html("Submitting")
       $.ajax({
           url:"https://script.google.com/a/sjcetpalai.ac.in/macros/s/AKfycbyNbWPwpF9kRlcSdbC7WmycowpYP5cH3e64HhG4Ow/exec",
           
           data:$("#form").serialize(),
           method:"post",
           success:function (response){
-              alert("Form submitted successfully")
-              window.location.reload()
+            $('#myModal').show()
+
+              
               //window.location.href="https://google.com"
           },
           error:function (err){
-              alert("Something Error")
+            $(".sbmt").attr("disabled", false);
+        $('.sbmt').html("Submit")
+            $('#myModal2').show()
+
 
           }
       })
   })
+  function myfunction3(){
+    // $('#fname').val() ===''
+    // $('#lname').val() ===''
+    // $('#email').val() ===''
+    // $('#phno').val() ===''
+    // $('#college').val() ===''
+    // $('#membership').val() ===''
+    // $('#consent').val() ==='Yes'
+    window.location.reload()
+  $('#myModal').hide()
+  
+}
+
+function myfunction4(){
+  $('#myModal2').hide()
+  
+}
 </script>
 <!-- <script> 
 function myfunction(){
@@ -326,15 +349,7 @@ function myfunction2(response){
     
 }
 
-function myfunction3(){
-  $('#myModal').hide()
-  location.reload(true); 
-}
 
-function myfunction4(){
-  $('#myModal2').hide()
-  
-}
 </script> -->
 </body>
 </html>
