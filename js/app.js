@@ -119,6 +119,7 @@ function myfunction(){
 	var course = $('#college').val()
   var membership = $('#membership').val()
   var consent = $('#consent').val()
+  console.log(membership)
 	if(fname !== '' && email!== '' && phone !== '' && college !== '' && phone.length === 10 && membership !== '' && consent !==''){
 		$('.submit-button').toggleClass('hide')
 		$('.loader').toggleClass('hide')
