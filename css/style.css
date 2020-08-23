@@ -8865,6 +8865,11 @@ h1, h2, h3, h4, h5,
   display: none;
 }
 
+location {
+  font-size: 24px;
+  color: #393939;
+}
+
 .hero-wrap {
   width: 100%;
   position: relative;

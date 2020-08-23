@@ -142,16 +142,16 @@
                     </div>
                     <div class="row">
                         <div class="offset-md-3 col-md-6 submit-button ">
-                            <button onclick="myfunction()" type="submit" class="btn btn-primary btn-block ">Submit</button>
+                            <button onclick="myfunction()" type="submit" class="btn btn-primary btn-block sbmt ">Submit</button>
                         </div>
-                        <div class="offset-md-3 col-md-6 loader hide">
+                        <!-- <div class="offset-md-3 col-md-6 loader hide">
                             <div class="btn btn-primary btn-block">
                               <div class=" spinner-border text-primary" role="status">
                                   <span class="sr-only">Loading...</span>
                               </div>
                             </div>
                             
-                    </div>
+                    </div> -->
             </div>
             
             
@@ -267,15 +267,17 @@ function myfunction(){
   var consent = $('#consent').val()
   console.log(membership)
 	if(fname !== '' && email!== '' && lname !=='' && phone !== '' && college !== '' && phone.length === 10 && membership !== '' && consent !==''){
-		$('.submit-button').toggleClass('hide')
-		$('.loader').toggleClass('hide')
+		// $('.submit-button').toggleClass('hide')
+		// $('.loader').toggleClass('hide')
+    $(".sbmt").attr("disabled", true);
+    $('.sbmt').html("Submitiing")
   // console.log("Hi")
   }
 
-  console.log(fname, email, phone)
+  // console.log(fname, email, phone)
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyday4HUAprug_M4pKcZmFil08DHvzW6UaT2L_R7egyCoRfshw/exec'
+const scriptURL = 'https://script.google.com/a/sjcetpalai.ac.in/macros/s/AKfycbyKKtwzjJUDv1nGkotDcco__ZY3dNQk2oaqfdnn/exec'
 
 const form = document.forms['google-sheet']
   
@@ -295,13 +297,11 @@ form.addEventListener('submit', e => {
 
 function myfunction2(response){
     if(response.status === 200){
-        $('.loader').toggleClass('hide')
-        $('.submit-button').toggleClass('hide')
+        
         $('#myModal').show()
     }
     else{
-      $('.loader').toggleClass('hide')
-        $('.submit-button').toggleClass('hide')
+      
         $('#myModal2').show()
     }
     
@@ -309,10 +309,12 @@ function myfunction2(response){
 
 function myfunction3(){
   $('#myModal').hide()
+  location.reload(true); 
 }
 
 function myfunction4(){
   $('#myModal2').hide()
+  
 }
 </script>
 </body>
