@@ -51,7 +51,7 @@
         <div class="col-md-6 offset-md-3 heading-section ftco-animate text-center">
             <h2 class="mb-1">Registration</h2>
           </div>
-        <form class="pt-3" id="form" method="POST" autocomplete="off" name="google-sheet">
+        <form class="pt-3" id="form" method="POST" autocomplete="off" name="google-sheet enctype="application/x-www-form-urlencoded;charset=UTF-8"">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -253,7 +253,26 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="js/main.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
-<script> 
+<script>
+  $("#form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbxKL4db_nr7hXUolO-mN5ZI0xP5XrQzY1eD8o9pKw/exec",
+          data:$("#form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              window.location.reload()
+              //window.location.href="https://google.com"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
+</script>
+<!-- <script> 
 function myfunction(){
   var fname = $('#fname').val()
   var lname = $('#lname').val()
@@ -268,9 +287,9 @@ function myfunction(){
 	// 	// $('.submit-button').toggleClass('hide')
 	// 	// $('.loader').toggleClass('hide')
   //   $(".sbmt").attr("disabled", true);
-  //   $('.sbmt').html("Submitting")
-  console.log("Hi")
-  }
+  // //   $('.sbmt').html("Submitting")
+  // console.log("Hi")
+  // }
 
   // console.log(fname, email, phone)
 }
@@ -315,6 +334,6 @@ function myfunction4(){
   $('#myModal2').hide()
   
 }
-</script>
+</script> -->
 </body>
 </html>
