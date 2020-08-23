@@ -111,6 +111,22 @@ particlesJS('particles-js',
 }
 );
 
+function myfunction(){
+  var fname = $('#fname').val()
+  
+	var email = $('#email').val()
+	var phone = $('#phno').val()
+	var course = $('#college').val()
+  var membership = $('#membership').val()
+  var consent = $('#consent').val()
+	if(fname !== '' && email!== '' && phone !== '' && college !== '' && phone.length === 10 && membership !== '' && consent !==''){
+		$('.submit-button').toggleClass('hide')
+		$('.loader').toggleClass('hide')
+  // console.log("Hi")
+  }
+
+  console.log(fname, email, phone)
+}
 
 
 

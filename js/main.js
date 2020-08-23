@@ -325,15 +325,4 @@
 
 })(jQuery);
 
-function myfunction(){
-	var name = $('#name').val()
-	var email = $('#email').val()
-	var phone = $('#phone').val()
-	var course = $('#course').val()
-	var ieee = $('#ieee').val()
-	if(name !== '' && ieee!== '' && email !== '' && phone !== '' && phone.length === 10 && course !== ''){
-		$('.submit-button').toggleClass('hide')
-		$('.loader').toggleClass('hide')
-	}
-}
 
