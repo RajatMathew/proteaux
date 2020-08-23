@@ -263,12 +263,12 @@ function myfunction(){
   var membership = $('#membership').val()
   var consent = $('#consent').val()
   console.log(membership)
-	if(fname !== '' && email!== '' && lname !=='' && phone !== '' && college !== '' && phone.length === 10 && membership !== '' && consent !==''){
-		// $('.submit-button').toggleClass('hide')
-		// $('.loader').toggleClass('hide')
-    $(".sbmt").attr("disabled", true);
-    $('.sbmt').html("Submitiing")
-  // console.log("Hi")
+	// if(fname !== '' && email!== '' && lname !=='' && phone !== '' && college !== '' && phone.length === 10 && membership !== '' && consent !==''){
+	// 	// $('.submit-button').toggleClass('hide')
+	// 	// $('.loader').toggleClass('hide')
+  //   $(".sbmt").attr("disabled", true);
+  //   $('.sbmt').html("Submitting")
+  console.log("Hi")
   }
 
   // console.log(fname, email, phone)
@@ -280,6 +280,7 @@ const form = document.forms['google-sheet']
   
 form.addEventListener('submit', e => {
   e.preventDefault()
+  console.log($("#form").serialize())
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
         myfunction2(response);
