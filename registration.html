@@ -56,7 +56,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="label-text">First Name</label><span class="required">&nbsp;*</span>
-                        <input type="text" class="form-control" id="fname" name="Name"  placeholder="eg. John " required>
+                        <input type="text" class="form-control" id="fname" name="FName"  placeholder="eg. John " required>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -257,7 +257,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   $("#form").submit((e)=>{
       e.preventDefault()
       $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbxKL4db_nr7hXUolO-mN5ZI0xP5XrQzY1eD8o9pKw/exec",
+          url:"https://script.google.com/a/sjcetpalai.ac.in/macros/s/AKfycbyNbWPwpF9kRlcSdbC7WmycowpYP5cH3e64HhG4Ow/exec",
+          
           data:$("#form").serialize(),
           method:"post",
           success:function (response){
