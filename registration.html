@@ -76,7 +76,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="label-text">Whatsapp Number</label><span class="required">&nbsp;*</span>
-                        <input type="number" pattern="[0-9]{10}" class="form-control" id="phno" name="phno"  placeholder="eg. 9876543210" required>
+                        <input type="tel" pattern="[0-9]{10}" class="form-control" id="phno" name="phno"  placeholder="eg. 9876543210" required>
                     </div>
                 </div>
             </div>
@@ -296,60 +296,5 @@ function myfunction4(){
   
 }
 </script>
-<!-- <script> 
-function myfunction(){
-  var fname = $('#fname').val()
-  var lname = $('#lname').val()
-  
-	var email = $('#email').val()
-	var phone = $('#phno').val()
-	var college = $('#college').val()
-  var membership = $('#membership').val()
-  var consent = $('#consent').val()
-  console.log(membership)
-	// if(fname !== '' && email!== '' && lname !=='' && phone !== '' && college !== '' && phone.length === 10 && membership !== '' && consent !==''){
-	// 	// $('.submit-button').toggleClass('hide')
-	// 	// $('.loader').toggleClass('hide')
-  //   $(".sbmt").attr("disabled", true);
-  // //   $('.sbmt').html("Submitting")
-  // console.log("Hi")
-  // }
-
-  // console.log(fname, email, phone)
-}
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwK0Zh0HfmGa6cezlb76JAWIXaqEc3mIKrA5LfvWM0_SB3WsqP2/exec'
-
-const form = document.forms['google-sheet']
-  
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  console.log($("#form").serialize())
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        myfunction2(response);
-        console.log(response);
-        })
-    .catch(error => 
-    {
-      console.error('Error!', error.message)
-      myfunction2(error); 
-    })
-})
-
-function myfunction2(response){
-    if(response.status === 200){
-        
-        $('#myModal').show()
-    }
-    else{
-      
-        $('#myModal2').show()
-    }
-    
-}
-
-
-</script> -->
 </body>
 </html>
