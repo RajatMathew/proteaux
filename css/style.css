@@ -8841,6 +8841,22 @@ h1, h2, h3, h4, h5,
   right: -25px;
 }
 
+#faq {
+  height: auto;
+}
+
+.reg-form {
+  padding-top: 80px;
+}
+
+.required {
+  color: red;
+}
+
+.label-text {
+  color: black;
+}
+
 .hero-wrap {
   width: 100%;
   position: relative;
